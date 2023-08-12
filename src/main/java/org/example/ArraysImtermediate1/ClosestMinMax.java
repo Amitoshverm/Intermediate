@@ -9,6 +9,27 @@ public class ClosestMinMax {
 
     static int minMax(int[] arr) {
 
+        int ans = arr.length, max = 0, min = 0;
+        // getting max and min
+        for (int i = 0; i < arr.length; i++) {
+            max = Math.max(arr[0], arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++) {
+            min = Math.min(arr[0], arr[i]);
+        }
+        int maxIndex = 2*arr.length;
+        int minIndex = 2*arr.length;
+        for (int i = arr.length-1; i >= 0; i--) {
+            if (arr[i] == max) {
+                ans = Math.min(ans, minIndex - i + 1);
+                maxIndex = i;
+            }
+            else if (arr[i] == min) {
+                ans = Math.min(ans, maxIndex - i + 1);
+                minIndex = i;
+            }
+        }
+        return  ans;
 
 
 
