@@ -1,4 +1,4 @@
-package org.example.Arrays;
+package org.example.ArraysImtermediate1;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package org.example.Arrays;
+package org.example.ArraysImtermediate1;
 
 public class PairsAandG {
     public static void main(String[] args) {
